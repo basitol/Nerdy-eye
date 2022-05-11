@@ -1,20 +1,21 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import { CustomButton } from "../reusables";
+import { profile, profileLg } from "../../assets";
 import "./Hero.scss";
 
 const Hero = ({ darkmode }) => {
   return (
-    <section className={`hero ${darkmode ? "dark" : ""}`}>
-      <div>
+    <section className={`hero md:flex ${darkmode ? "dark" : ""}`}>
+      <div className="hero--title w-full text-center md:w-6/12 md:mt-32 md:text-left md:ml-12 lg:ml-24	">
         <div className="header">GET MATCHED & LET YOUR JOB FIND YOU</div>
         <div className="sub-header">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum
           lectus placerat id in vehicula felis condimentum.
         </div>
-        <CustomButton>For Talents</CustomButton>
-        <div className="flex justify-around mt-6">
-          <div className="flex flex-col">
+        <CustomButton className={"mt-8 md:mt-14"}>For Talents</CustomButton>
+        <div className="flex justify-around mt-6 md:justify-start md:mt-20">
+          <div className="flex flex-col md:mr-24">
             <h2 className="text-4xl font-bold">
               120
               <span className="l-red">+</span>
@@ -30,7 +31,14 @@ const Hero = ({ darkmode }) => {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className="hero--sub flex items-center justify-center pt-9 pb-12 w-full md:w-6/12w-full md:w-6/12 md:mr-12 lg:mr-24">
+        <div className="profile">
+          <picture>
+            <source media="(min-width: 1024px)" srcset={profileLg} />
+            <img src={profile} alt="IfItDoesntMatchAnyMedia" />
+          </picture>
+        </div>
+      </div>
     </section>
   );
 };
