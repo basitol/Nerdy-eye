@@ -8,9 +8,11 @@ import {
   IoMdClose,
   rightLightStroke,
   leftLightStroke,
+  rightDarkStroke,
+  leftDarkStroke,
 } from "../../assets";
 import { menuData } from "../../assets/data";
-import { IconContainer, CustomNavLink, CustomLink } from "../reusables";
+import { IconContainer, CustomNavLink } from "../reusables";
 import { useState } from "react";
 
 import "./Navbar.scss";
@@ -37,7 +39,7 @@ const Navbar = ({ toggledarkmode, darkmode }) => {
         className={`menu flex items-center  ${menuOption ? "close" : "open"}`}
       >
         <div className="hidden lg:inline">
-          <img src={leftLightStroke} alt="stroke" />
+          <img src={darkmode ? leftDarkStroke : leftLightStroke} alt="stroke" />
         </div>
         <ul className={`flex justify-between`}>
           {menuData.map((nav) => {
@@ -57,16 +59,17 @@ const Navbar = ({ toggledarkmode, darkmode }) => {
           })}
         </ul>
         <div className="hidden lg:inline">
-          <img src={rightLightStroke} alt="stroke" />
+          <img
+            src={darkmode ? rightDarkStroke : rightLightStroke}
+            alt="stroke"
+          />
         </div>
 
         <div className="tog md:hidden">
           <div className="toggler">
-            <p className="toggler--light">Light</p>
             <div className="toggler--slider" onClick={toggledarkmode}>
               <div className="toggler--slider--circle"></div>
             </div>
-            <p className="toggler--dark">Dark</p>
           </div>
         </div>
       </div>
@@ -89,7 +92,7 @@ const Navbar = ({ toggledarkmode, darkmode }) => {
             onClick={togglemenu}
           >
             <IoMdClose
-              className={`${darkmode ? "text-black" : "text-white"}`}
+              className={`${darkmode ? "text-white" : "text-white"}`}
             />
           </IconContainer>
         )}
