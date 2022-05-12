@@ -22,7 +22,6 @@ const Navbar = ({ toggledarkmode, darkmode }) => {
 
   function togglemenu() {
     setMenuOption((prevState) => !prevState);
-    console.log("clicked");
   }
 
   return (
@@ -47,11 +46,7 @@ const Navbar = ({ toggledarkmode, darkmode }) => {
 
             return (
               <li key={id} className="">
-                <CustomNavLink
-                  href={title}
-                  // onClick={changeVisibility}
-                  // className={title === "Dashboard" && "active"}
-                >
+                <CustomNavLink href={title}>
                   <span className="title">{title}</span>
                 </CustomNavLink>
               </li>
