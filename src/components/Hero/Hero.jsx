@@ -1,10 +1,10 @@
 import React from "react";
-// import { useState } from "react";
+import { Toggle } from "../index";
 import { CustomButton } from "../reusables";
 import { profile, profileLg } from "../../assets";
 import "./Hero.scss";
 
-const Hero = ({ darkmode }) => {
+const Hero = ({ darkmode, toggledarkmode }) => {
   return (
     <section className={`hero md:flex ${darkmode ? "dark" : ""}`}>
       <div className="hero--title w-full text-center md:w-6/12 md:mt-32 md:text-left md:ml-12 lg:ml-24	">
@@ -39,6 +39,7 @@ const Hero = ({ darkmode }) => {
           </picture>
         </div>
       </div>
+      <Toggle toggledarkmode={toggledarkmode} darkmode={darkmode} />
     </section>
   );
 };
