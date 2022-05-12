@@ -1,4 +1,4 @@
-import { Navbar, Hero } from "./components";
+import { Navbar, Hero, Works, Jobs } from "./components";
 import { BrowserRouter } from "react-router-dom";
 import { useState } from "react";
 
@@ -13,12 +13,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="">
-        <Navbar
-          darkmode={theme}
-          toggledarkmode={handleToggle}
-          // togglemenu={handleMenu}
-        />
-        <Hero darkmode={theme} />
+        <Navbar darkmode={theme} toggledarkmode={handleToggle} />
+        <Hero darkmode={theme} toggledarkmode={handleToggle} />
+        <Works darkmode={theme} />
+        <Jobs darkmode={theme} />
       </div>
     </BrowserRouter>
   );
