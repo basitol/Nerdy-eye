@@ -6,6 +6,12 @@ import {
   meta,
   appleImg,
   amazonImg,
+  fintech,
+  hospitality,
+  media,
+  commerce,
+  health,
+  // transportation,
 } from "../../assets";
 
 export const menuData = [
@@ -129,5 +135,45 @@ export const jobData = [
     industry: "Meta",
     pathImage: phoneImg,
     image: meta,
+  },
+];
+
+export const industryData = [
+  {
+    id: 1,
+    title: "Logistics & Transportation",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non aliquet in lacus, duis sagittis. Eget elementum duis",
+    image:
+      "https://images.unsplash.com/photo-1543499459-d1460946bdc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+  },
+  {
+    id: 2,
+    title: "Fintech",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non aliquet in lacus, duis sagittis. Eget elementum duis",
+    image: fintech,
+  },
+  {
+    id: 3,
+    title: "E-commerce",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non aliquet in lacus, duis sagittis. Eget elementum duis",
+    image: commerce,
+  },
+  {
+    id: 4,
+    title: "Media",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non aliquet in lacus, duis sagittis. Eget elementum duis",
+    image: media,
+  },
+  {
+    id: 5,
+    title: "Hospitality",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non aliquet in lacus, duis sagittis. Eget elementum duis",
+    image: hospitality,
+  },
+  {
+    id: 6,
+    title: "Hospitality",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non aliquet in lacus, duis sagittis. Eget elementum duis",
+    image: health,
   },
 ];
