@@ -5,10 +5,34 @@
 
     .jobs__header {
       color: #fff;
+      h1 {
+        color: #fff;
+        > span {
+          color: #fff;
+        }
+      }
     }
 
     .jobs__sub-header {
       color: #fff;
+    }
+
+    .offers {
+      h2 {
+        color: #fff;
+      }
+      @media screen and (min-width: 1024px) {
+        background: #0e0e0e;
+      }
+    }
+
+    .career-list {
+      .swiper-button-prev,
+      .swiper-button-next {
+        background: #222;
+        box-shadow: none;
+        color: #fff;
+      }
     }
   }
 
@@ -23,6 +47,10 @@
 
     .nerd {
       color: #d23432;
+
+      @media screen and (min-width: 768px) {
+        color: #000;
+      }
     }
   }
 
@@ -55,6 +83,7 @@
       width: 115px;
       height: 115px;
       background: #ffffff;
+      color: #000;
       box-shadow: -17px 9px 45px #ececec;
       border-radius: 50%;
     }
@@ -125,7 +154,7 @@
   }
 
   .offers {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       background: #f7f7f9;
       // opacity: 0.3;
       height: 740px;
