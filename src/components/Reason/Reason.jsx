@@ -8,7 +8,7 @@ const Reason = ({ darkmode }) => {
       <div className=" mb-9 pt-16 flex justify-center">
         <img src={signature} alt="signature" />
       </div>
-      <div className="flex mx-24 wrapper">
+      <div className="flex lg:mx-24 wrapper">
         <div className="hidden lg:block w-2/4 img-con">
           <img src={reason} alt="logo" />
         </div>
