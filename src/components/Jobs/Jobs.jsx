@@ -102,7 +102,7 @@ const Jobs = ({ darkmode }) => {
         </div>
         <div>
           <div className="flex mx-0 md:mx-10 xlg:mx-20">
-            <div className="flex justify-center offers mb-12 md:mb-0 w-full md:w-2/4">
+            <div className="flex justify-center offers mb-12 md:mb-0 w-full lg:w-2/4">
               <div className="jobs__sub-header pb-5 md:mr-10 md:mt-10">
                 <h2 className="job-count">
                   500<span>+</span>
@@ -117,7 +117,7 @@ const Jobs = ({ darkmode }) => {
                 <p className="job-count-p">Startups</p>
               </div>
             </div>
-            <div className="jobs__offer__image hidden md:block w-2/4">
+            <div className="jobs__offer__image hidden lg:block w-2/4">
               <img src={offer} alt="jobs" />
             </div>
           </div>
@@ -130,7 +130,7 @@ const Jobs = ({ darkmode }) => {
                     key={id}
                     {...job}
                     darkmode={darkmode}
-                    className={`hidden md:block div${id}`}
+                    className={`hidden lg:block div${id}`}
                   />
                 );
               })}
@@ -142,17 +142,20 @@ const Jobs = ({ darkmode }) => {
                   key={id}
                   {...job}
                   darkmode={darkmode}
-                  className={"md:hidden"}
+                  className={"lg:hidden"}
                 />
               );
             })}
           </div>
         </div>
-        <div className="flex items-center justify-center md:hidden">
+        <div className="flex items-center justify-center lg:hidden">
           <CustomButton className={""} onClick={handleExpand}>
             {jobInfo.expanded ? "See Less" : "See More"}
           </CustomButton>
         </div>
+      </div>
+      <div className="hidden lg:block mb-9 lg:mt-36 flex justify-center">
+        <img src={signature} alt="signature" />
       </div>
       {/* <Job darkmode={darkmode} /> */}
     </section>
